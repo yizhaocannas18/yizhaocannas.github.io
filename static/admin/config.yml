@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: "yizhaocannas18/yizhaocannas.github.io" # Deve coincidere con il repository
+  branch: main # O il nome del tuo branch principale
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "posts"
+    label: "Post Fotografici"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Copertina", name: "cover", widget: "image", required: false}
+      - {label: "Corpo", name: "body", widget: "markdown", required: false}

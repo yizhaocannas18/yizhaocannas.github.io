@@ -1,0 +1,14 @@
+baseURL = "https://yizhaocannas18.github.io/"
+languageCode = "it-IT"
+defaultContentLanguage = "it"
+title = "Portfolio Fotografico"
+theme = "hello-friend-ng"
+
+[params]
+  # Modifica questo per includere i post in una visualizzazione tipo galleria
+  # (Dipende dalla versione del tema, ma di base hello-friend-ng mostra le cover)
+  showPostCoverInList = true
+  showPostCoverInSingle = true
+
+[languages.it]
+  title = "Portfolio Fotografico"

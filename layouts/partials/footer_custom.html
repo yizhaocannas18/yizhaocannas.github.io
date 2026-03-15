@@ -1,0 +1,27 @@
+<script>
+    // Disabilita il click destro
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Impedisce il trascinamento delle immagini
+    document.addEventListener('dragstart', event => {
+        if (event.target.tagName.toLowerCase() === 'img') {
+            event.preventDefault();
+        }
+    });
+
+    // Blocca scorciatoie tastiera Ctrl+S, Ctrl+U e F12
+    document.addEventListener('keydown', event => {
+        // Ctrl+S
+        if (event.ctrlKey && (event.key === 's' || event.key === 'S')) {
+            event.preventDefault();
+        }
+        // Ctrl+U
+        if (event.ctrlKey && (event.key === 'u' || event.key === 'U')) {
+            event.preventDefault();
+        }
+        // F12
+        if (event.key === 'F12') {
+            event.preventDefault();
+        }
+    });
+</script>
